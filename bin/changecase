@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# Load configuration if found
+if [ -f /etc/changecase.conf ] ; then
+	. /etc/changecase.conf
+fi
+
+if [ "$TO_UPPER" -eq "1" ] ; then
+  tr [:lower:] [:upper:]
+else 
+  tr [:upper:] [:lower:]
+fi
+
+
